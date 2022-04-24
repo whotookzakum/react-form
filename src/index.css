@@ -1,13 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(14, 0, 41);
+  font-family: 'Red Hat Display', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(237deg, rgba(3, 32, 65, 0.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(167deg, rgba(44, 14, 56, 0.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(376deg, rgba(11, 11, 43, 0.8), rgba(0,0,255,0) 70.71%);
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-80%);
+}
+
+h1 {
+  font-size: 4rem;
+  color: lightgray;
+  margin: 0 0 20px 0;
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.3));
+}
+
+input {
+  font-family: inherit;
+  margin: 0.5em 1em;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: 3px solid lightgray;
+  color: lightgray;
+  letter-spacing: 0.1rem;
+  border-radius: 4px;
+  width: 300px;
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.3));
+  outline: none;
+}
+
+::placeholder {
+  text-transform: uppercase;
+  color: rgb(241, 237, 237);
+}
+
+input.input-invalid {
+  border-color: darkred;
+}
+
+input.input-invalid::placeholder {
+  color: red;
+}
+
+input.input-valid {
+  border-color: forestgreen;
+}
+
+input.input-valid::placeholder {
+  color: forestgreen;
+}
+
+/* Hide placeholder when focused */
+input:focus::placeholder {
+  color: transparent;
 }
